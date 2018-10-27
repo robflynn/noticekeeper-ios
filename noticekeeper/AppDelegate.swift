@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
+        let mainViewController = MainViewController()
+        mainViewController.view.backgroundColor = .purple
+
+        window?.rootViewController = mainViewController
+
+        window?.makeKeyAndVisible()
+
         return true
     }
 }
