@@ -30,8 +30,10 @@ class ClientsViewController: UIViewController {
     }
 
     private func loadData() {
-        noticekeeper.clients {
+        noticekeeper.clients { clients in
             print("inside the clients callback")
+
+            print(clients)
         }
     }
 }

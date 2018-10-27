@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D64B1D0CB75A8B70E7D62EED /* Pods_noticekeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39ACCF0AC6B3CD0EA1C7FBB8 /* Pods_noticekeeper.framework */; };
 		FD229F9621844FF7004F01A6 /* NKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229F9521844FF7004F01A6 /* NKClient.swift */; };
+		FD229F9A21845287004F01A6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229F9921845287004F01A6 /* Client.swift */; };
 		FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91AA262184496B000133F7 /* AppDelegate.swift */; };
 		FD91AA2E2184496E000133F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2D2184496E000133F7 /* Assets.xcassets */; };
 		FD91AA312184496E000133F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2F2184496E000133F7 /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 		39ACCF0AC6B3CD0EA1C7FBB8 /* Pods_noticekeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_noticekeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6550F5E68762A93E3DE1ED /* Pods-noticekeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-noticekeeper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-noticekeeper/Pods-noticekeeper.debug.xcconfig"; sourceTree = "<group>"; };
 		FD229F9521844FF7004F01A6 /* NKClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKClient.swift; sourceTree = "<group>"; };
+		FD229F9921845287004F01A6 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		FD91AA232184496B000133F7 /* noticekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noticekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD91AA262184496B000133F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD91AA2D2184496E000133F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +61,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FD229F972184526F004F01A6 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FD91AA3921844AEF000133F7 /* MainViewController.swift */,
+				FD91AA3B21844C4A000133F7 /* ClientsViewController.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FD229F982184527D004F01A6 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FD229F9921845287004F01A6 /* Client.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		FD229F9B218452BB004F01A6 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				FD229F9521844FF7004F01A6 /* NKClient.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 		FD91AA1A2184496B000133F7 = {
 			isa = PBXGroup;
 			children = (
@@ -81,12 +108,12 @@
 			isa = PBXGroup;
 			children = (
 				FD91AA262184496B000133F7 /* AppDelegate.swift */,
+				FD229F9B218452BB004F01A6 /* network */,
+				FD229F982184527D004F01A6 /* models */,
+				FD229F972184526F004F01A6 /* views */,
 				FD91AA2D2184496E000133F7 /* Assets.xcassets */,
 				FD91AA2F2184496E000133F7 /* LaunchScreen.storyboard */,
 				FD91AA322184496E000133F7 /* Info.plist */,
-				FD91AA3921844AEF000133F7 /* MainViewController.swift */,
-				FD91AA3B21844C4A000133F7 /* ClientsViewController.swift */,
-				FD229F9521844FF7004F01A6 /* NKClient.swift */,
 			);
 			path = noticekeeper;
 			sourceTree = "<group>";
@@ -213,6 +240,7 @@
 				FD91AA3C21844C4A000133F7 /* ClientsViewController.swift in Sources */,
 				FD229F9621844FF7004F01A6 /* NKClient.swift in Sources */,
 				FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */,
+				FD229F9A21845287004F01A6 /* Client.swift in Sources */,
 				FD91AA3A21844AEF000133F7 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
