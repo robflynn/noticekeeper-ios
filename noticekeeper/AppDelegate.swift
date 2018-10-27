@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let mainViewController = MainViewController()
+        let mainViewController = buildMainViewController()
 
         window?.rootViewController = mainViewController
 
@@ -28,5 +28,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+
+    private func buildMainViewController() -> UIViewController {
+        let mainViewController = MainViewController()
+
+        return mainViewController
+
+        /*
+        let splitViewController = UISplitViewController()
+
+        let vc1 = UIViewController()
+        vc1.view.backgroundColor = .red
+
+        let vc2 = UIViewController()
+        vc2.view.backgroundColor = .blue
+
+        splitViewController.viewControllers = [vc1, vc2]
+
+        splitViewController.preferredDisplayMode = .allVisible
+
+        let tvc = UITabBarController()
+        tvc.viewControllers = [splitViewController]
+
+        return tvc
+        */
+    }
 }
 
+extension AppDelegate: UISplitViewControllerDelegate {
+
+}
