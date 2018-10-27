@@ -6,5 +6,5 @@ target 'noticekeeper' do
   use_frameworks!
 
   # Pods for noticekeeper
-
+	pod 'TinyConstraints'
 end

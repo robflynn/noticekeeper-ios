@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import TinyConstraints
 
 class ClientsViewController: UIViewController {
-    private lazy var tableView: UITableView = UITableView()
+    private lazy var tableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.addSubview(tableView)
+
         tableView.backgroundColor = .orange
 
-        self.view.addSubview(tableView)
+        tableView.edges(to: self.view.safeAreaLayoutGuide)
+
+        self.tabBarItem = UITabBarItem(title: "Clients", image: nil, selectedImage: nil)
     }
 }

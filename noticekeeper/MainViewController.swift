@@ -10,15 +10,25 @@ import UIKit
 
 class MainViewController: UITabBarController {
 
+    private(set) lazy var clientsViewController: ClientsViewController = ClientsViewController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        delegate = self
 
         loadTabs()
     }
 
     private func loadTabs() {
-        let clientsViewController = UIViewController()
+        self.viewControllers = [
+            clientsViewController
+        ]
+    }
+}
 
-        self.viewControllers?.append(clientsViewController)
+extension MainViewController: UITabBarControllerDelegate {
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        print("An item was selected")
     }
 }
