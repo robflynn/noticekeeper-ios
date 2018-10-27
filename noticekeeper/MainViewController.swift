@@ -8,11 +8,17 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("the view loaded")
+        loadTabs()
+    }
+
+    private func loadTabs() {
+        let clientsViewController = UIViewController()
+
+        self.viewControllers?.append(clientsViewController)
     }
 }
