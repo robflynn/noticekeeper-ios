@@ -8,6 +8,8 @@
 
 import UIKit
 
+let noticekeeper = NKClient(.local)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

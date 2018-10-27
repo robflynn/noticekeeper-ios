@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D64B1D0CB75A8B70E7D62EED /* Pods_noticekeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39ACCF0AC6B3CD0EA1C7FBB8 /* Pods_noticekeeper.framework */; };
+		FD229F9621844FF7004F01A6 /* NKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229F9521844FF7004F01A6 /* NKClient.swift */; };
 		FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91AA262184496B000133F7 /* AppDelegate.swift */; };
 		FD91AA2E2184496E000133F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2D2184496E000133F7 /* Assets.xcassets */; };
 		FD91AA312184496E000133F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2F2184496E000133F7 /* LaunchScreen.storyboard */; };
@@ -19,6 +20,7 @@
 		0F95BC31891ED58A469F6F2B /* Pods-noticekeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-noticekeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-noticekeeper/Pods-noticekeeper.release.xcconfig"; sourceTree = "<group>"; };
 		39ACCF0AC6B3CD0EA1C7FBB8 /* Pods_noticekeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_noticekeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6550F5E68762A93E3DE1ED /* Pods-noticekeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-noticekeeper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-noticekeeper/Pods-noticekeeper.debug.xcconfig"; sourceTree = "<group>"; };
+		FD229F9521844FF7004F01A6 /* NKClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKClient.swift; sourceTree = "<group>"; };
 		FD91AA232184496B000133F7 /* noticekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noticekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD91AA262184496B000133F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD91AA2D2184496E000133F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				FD91AA322184496E000133F7 /* Info.plist */,
 				FD91AA3921844AEF000133F7 /* MainViewController.swift */,
 				FD91AA3B21844C4A000133F7 /* ClientsViewController.swift */,
+				FD229F9521844FF7004F01A6 /* NKClient.swift */,
 			);
 			path = noticekeeper;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD91AA3C21844C4A000133F7 /* ClientsViewController.swift in Sources */,
+				FD229F9621844FF7004F01A6 /* NKClient.swift in Sources */,
 				FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */,
 				FD91AA3A21844AEF000133F7 /* MainViewController.swift in Sources */,
 			);
