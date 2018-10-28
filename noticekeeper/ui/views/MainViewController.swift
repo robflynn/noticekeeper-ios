@@ -14,10 +14,10 @@ class MainViewController: UITabBarController {
     }
 
     private func buildTabs() {
-        let clientsViewController = ClientsViewController()
+        let casesViewController = CasesViewController()
 
         self.viewControllers = [
-            clientsViewController
+            casesViewController
         ]
     }
 }

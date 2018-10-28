@@ -1,5 +1,5 @@
 //
-//  ClientsViewController.swift
+//  CasesViewController.swift
 //  noticekeeper
 //
 //  Created by Rob Flynn on 10/27/18.
@@ -9,14 +9,20 @@
 import UIKit
 import TinyConstraints
 
-class ClientsViewController: UIViewController {
+class CasesViewController: UIViewController {
     private var splitVC: NKSplitViewController!
 
     private var masterController = UITableViewController()
     private var detailController = UIViewController()
 
     /// Clients
-    private(set) var clients: [Client] = []
+    private(set) var clients: [CourtCase] = [] {
+        didSet {
+            async {
+                self.masterController.tableView.reloadData()
+            }
+        }
+    }
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -31,7 +37,7 @@ class ClientsViewController: UIViewController {
 
         splitVC.view.edges(to: self.view.safeAreaLayoutGuide)
 
-        self.tabBarItem.title = "Clients"
+        self.tabBarItem.title = "Cases"
 
         loadData()
     }
@@ -46,18 +52,14 @@ class ClientsViewController: UIViewController {
     }
 
     private func loadData() {
-        noticekeeper.clients { clients in
-            self.clients = clients
-
-            DispatchQueue.main.async {
-                self.masterController.tableView.reloadData()
-            }
+        noticekeeper.cases { cases in
+            self.clients = cases
         }
     }
 }
 
 // MARK: - UITableViewDataSource
-extension ClientsViewController: UITableViewDataSource {
+extension CasesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.clients.count
     }
@@ -76,6 +78,6 @@ extension ClientsViewController: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
-extension ClientsViewController: UITableViewDelegate {
+extension CasesViewController: UITableViewDelegate {
 
 }

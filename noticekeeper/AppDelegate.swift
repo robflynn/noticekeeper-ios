@@ -8,7 +8,15 @@
 
 import UIKit
 
-let noticekeeper = NKClient(.local)
+//let noticekeeper = NKAPIClient(.local)
+
+let noticekeeper = NKAPIClient()
+
+func async(completion: (() -> Void)?) {
+    DispatchQueue.main.async {
+        completion?()
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

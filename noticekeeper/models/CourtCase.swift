@@ -6,9 +6,7 @@
 //  Copyright © 2018 Thingerly. All rights reserved.
 //
 
-import Foundation
-
-public struct Client: Decodable {
+public struct CourtCase: Decodable {
     var id: Int
     var userID: Int
     var caseName: String

@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D64B1D0CB75A8B70E7D62EED /* Pods_noticekeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39ACCF0AC6B3CD0EA1C7FBB8 /* Pods_noticekeeper.framework */; };
-		FD229F9621844FF7004F01A6 /* NKClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229F9521844FF7004F01A6 /* NKClient.swift */; };
-		FD229F9A21845287004F01A6 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229F9921845287004F01A6 /* Client.swift */; };
+		FD229F9621844FF7004F01A6 /* NKAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229F9521844FF7004F01A6 /* NKAPIClient.swift */; };
+		FD229F9A21845287004F01A6 /* CourtCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229F9921845287004F01A6 /* CourtCase.swift */; };
 		FD229FA72184F993004F01A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FA62184F993004F01A6 /* MainViewController.swift */; };
-		FD229FA92184FA06004F01A6 /* ClientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FA82184FA06004F01A6 /* ClientsViewController.swift */; };
+		FD229FA92184FA06004F01A6 /* CasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FA82184FA06004F01A6 /* CasesViewController.swift */; };
 		FD229FAC21850683004F01A6 /* NKSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FAB21850683004F01A6 /* NKSplitViewController.swift */; };
+		FD229FB821851AC9004F01A6 /* JSONAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FB721851AC9004F01A6 /* JSONAPIClient.swift */; };
+		FD229FBA21851EC7004F01A6 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FB921851EC7004F01A6 /* APIResponse.swift */; };
+		FD229FBC21852073004F01A6 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FBB21852073004F01A6 /* APIEnvironment.swift */; };
 		FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91AA262184496B000133F7 /* AppDelegate.swift */; };
 		FD91AA2E2184496E000133F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2D2184496E000133F7 /* Assets.xcassets */; };
 		FD91AA312184496E000133F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2F2184496E000133F7 /* LaunchScreen.storyboard */; };
@@ -22,11 +25,14 @@
 		0F95BC31891ED58A469F6F2B /* Pods-noticekeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-noticekeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-noticekeeper/Pods-noticekeeper.release.xcconfig"; sourceTree = "<group>"; };
 		39ACCF0AC6B3CD0EA1C7FBB8 /* Pods_noticekeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_noticekeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6550F5E68762A93E3DE1ED /* Pods-noticekeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-noticekeeper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-noticekeeper/Pods-noticekeeper.debug.xcconfig"; sourceTree = "<group>"; };
-		FD229F9521844FF7004F01A6 /* NKClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKClient.swift; sourceTree = "<group>"; };
-		FD229F9921845287004F01A6 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		FD229F9521844FF7004F01A6 /* NKAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKAPIClient.swift; sourceTree = "<group>"; };
+		FD229F9921845287004F01A6 /* CourtCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourtCase.swift; sourceTree = "<group>"; };
 		FD229FA62184F993004F01A6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		FD229FA82184FA06004F01A6 /* ClientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientsViewController.swift; sourceTree = "<group>"; };
+		FD229FA82184FA06004F01A6 /* CasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesViewController.swift; sourceTree = "<group>"; };
 		FD229FAB21850683004F01A6 /* NKSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKSplitViewController.swift; sourceTree = "<group>"; };
+		FD229FB721851AC9004F01A6 /* JSONAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAPIClient.swift; sourceTree = "<group>"; };
+		FD229FB921851EC7004F01A6 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		FD229FBB21852073004F01A6 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		FD91AA232184496B000133F7 /* noticekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noticekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD91AA262184496B000133F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD91AA2D2184496E000133F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				FD229FA62184F993004F01A6 /* MainViewController.swift */,
-				FD229FA82184FA06004F01A6 /* ClientsViewController.swift */,
+				FD229FA82184FA06004F01A6 /* CasesViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -75,7 +81,7 @@
 		FD229F982184527D004F01A6 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				FD229F9921845287004F01A6 /* Client.swift */,
+				FD229F9921845287004F01A6 /* CourtCase.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -83,7 +89,8 @@
 		FD229F9B218452BB004F01A6 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				FD229F9521844FF7004F01A6 /* NKClient.swift */,
+				FD229FB02185159F004F01A6 /* api */,
+				FD229F9521844FF7004F01A6 /* NKAPIClient.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -103,6 +110,16 @@
 				FD229FAB21850683004F01A6 /* NKSplitViewController.swift */,
 			);
 			path = controls;
+			sourceTree = "<group>";
+		};
+		FD229FB02185159F004F01A6 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				FD229FB721851AC9004F01A6 /* JSONAPIClient.swift */,
+				FD229FB921851EC7004F01A6 /* APIResponse.swift */,
+				FD229FBB21852073004F01A6 /* APIEnvironment.swift */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 		FD91AA1A2184496B000133F7 = {
@@ -257,11 +274,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD229FAC21850683004F01A6 /* NKSplitViewController.swift in Sources */,
-				FD229F9621844FF7004F01A6 /* NKClient.swift in Sources */,
+				FD229FB821851AC9004F01A6 /* JSONAPIClient.swift in Sources */,
+				FD229F9621844FF7004F01A6 /* NKAPIClient.swift in Sources */,
 				FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */,
-				FD229F9A21845287004F01A6 /* Client.swift in Sources */,
-				FD229FA92184FA06004F01A6 /* ClientsViewController.swift in Sources */,
+				FD229F9A21845287004F01A6 /* CourtCase.swift in Sources */,
+				FD229FBA21851EC7004F01A6 /* APIResponse.swift in Sources */,
+				FD229FA92184FA06004F01A6 /* CasesViewController.swift in Sources */,
 				FD229FA72184F993004F01A6 /* MainViewController.swift in Sources */,
+				FD229FBC21852073004F01A6 /* APIEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
