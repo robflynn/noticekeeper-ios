@@ -89,12 +89,10 @@ extension CasesViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension CasesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = indexPath.row
-        let courtCase = self.courtCases[row]
+        let courtCase = self.courtCases[indexPath.row]
 
         let vc = CaseDetailViewController()
-
-        print(courtCase)
+        vc.courtCase = courtCase
 
         self.splitVC.showDetailViewController(vc, sender: self)
     }
