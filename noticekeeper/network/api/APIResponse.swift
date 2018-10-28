@@ -8,4 +8,5 @@
 
 public enum APIResponse<Value> {
     case success(Value)
+    case failure(Error)
 }

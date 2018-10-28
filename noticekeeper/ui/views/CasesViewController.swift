@@ -16,7 +16,7 @@ class CasesViewController: UIViewController {
     private var detailController = UIViewController()
 
     /// Clients
-    private(set) var clients: [CourtCase] = [] {
+    private(set) var courtCases: [CourtCase] = [] {
         didSet {
             async {
                 self.masterController.tableView.reloadData()
@@ -49,11 +49,12 @@ class CasesViewController: UIViewController {
     private func buildMasterView() {
         self.masterController.tableView.delegate = self
         self.masterController.tableView.dataSource = self
+        self.masterController.tableView.setEmptyMessage("Loading...")
     }
 
     private func loadData() {
         noticekeeper.cases { cases in
-            self.clients = cases
+            self.courtCases = cases
         }
     }
 }
@@ -61,13 +62,13 @@ class CasesViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension CasesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.clients.count
+        return self.courtCases.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ClientCell")
 
-        let client = self.clients[indexPath.row]
+        let client = self.courtCases[indexPath.row]
         cell.textLabel?.text = client.caseName
 
         cell.detailTextLabel?.text = client.caseNumber
@@ -75,9 +76,26 @@ extension CasesViewController: UITableViewDataSource {
 
         return cell
     }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Cases"
+    }
 }
 
 // MARK: - UITableViewDelegate
 extension CasesViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        let courtCase = self.courtCases[row]
 
+        let vc = CaseDetailViewController()
+
+        print(courtCase)
+
+        self.splitVC.showDetailViewController(vc, sender: self)
+    }
 }

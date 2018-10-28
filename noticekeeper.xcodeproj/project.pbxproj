@@ -16,6 +16,8 @@
 		FD229FB821851AC9004F01A6 /* JSONAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FB721851AC9004F01A6 /* JSONAPIClient.swift */; };
 		FD229FBA21851EC7004F01A6 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FB921851EC7004F01A6 /* APIResponse.swift */; };
 		FD229FBC21852073004F01A6 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FBB21852073004F01A6 /* APIEnvironment.swift */; };
+		FD229FBF218538FA004F01A6 /* UITableView+setEmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FBE218538FA004F01A6 /* UITableView+setEmptyMessage.swift */; };
+		FD229FC1218541CC004F01A6 /* CaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FC0218541CC004F01A6 /* CaseDetailViewController.swift */; };
 		FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91AA262184496B000133F7 /* AppDelegate.swift */; };
 		FD91AA2E2184496E000133F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2D2184496E000133F7 /* Assets.xcassets */; };
 		FD91AA312184496E000133F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2F2184496E000133F7 /* LaunchScreen.storyboard */; };
@@ -33,6 +35,8 @@
 		FD229FB721851AC9004F01A6 /* JSONAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAPIClient.swift; sourceTree = "<group>"; };
 		FD229FB921851EC7004F01A6 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		FD229FBB21852073004F01A6 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		FD229FBE218538FA004F01A6 /* UITableView+setEmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+setEmptyMessage.swift"; sourceTree = "<group>"; };
+		FD229FC0218541CC004F01A6 /* CaseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailViewController.swift; sourceTree = "<group>"; };
 		FD91AA232184496B000133F7 /* noticekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noticekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD91AA262184496B000133F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD91AA2D2184496E000133F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 			children = (
 				FD229FA62184F993004F01A6 /* MainViewController.swift */,
 				FD229FA82184FA06004F01A6 /* CasesViewController.swift */,
+				FD229FC0218541CC004F01A6 /* CaseDetailViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -122,6 +127,14 @@
 			path = api;
 			sourceTree = "<group>";
 		};
+		FD229FBD218538E5004F01A6 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FD229FBE218538FA004F01A6 /* UITableView+setEmptyMessage.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		FD91AA1A2184496B000133F7 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				FD91AA262184496B000133F7 /* AppDelegate.swift */,
+				FD229FBD218538E5004F01A6 /* extensions */,
 				FD229F9B218452BB004F01A6 /* network */,
 				FD229F982184527D004F01A6 /* models */,
 				FD229FA221845D06004F01A6 /* ui */,
@@ -273,8 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD229FBF218538FA004F01A6 /* UITableView+setEmptyMessage.swift in Sources */,
 				FD229FAC21850683004F01A6 /* NKSplitViewController.swift in Sources */,
 				FD229FB821851AC9004F01A6 /* JSONAPIClient.swift in Sources */,
+				FD229FC1218541CC004F01A6 /* CaseDetailViewController.swift in Sources */,
 				FD229F9621844FF7004F01A6 /* NKAPIClient.swift in Sources */,
 				FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */,
 				FD229F9A21845287004F01A6 /* CourtCase.swift in Sources */,

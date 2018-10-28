@@ -23,6 +23,8 @@ class NKAPIClient: JSONAPIClient {
             switch response {
             case .success(let cases):
                 completion(cases)
+            case .failure(let error):
+                assertionFailure("Handle failed case")
             }
         }
     }
