@@ -18,6 +18,7 @@
 		FD229FBC21852073004F01A6 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FBB21852073004F01A6 /* APIEnvironment.swift */; };
 		FD229FBF218538FA004F01A6 /* UITableView+setEmptyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FBE218538FA004F01A6 /* UITableView+setEmptyMessage.swift */; };
 		FD229FC1218541CC004F01A6 /* CaseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD229FC0218541CC004F01A6 /* CaseDetailViewController.swift */; };
+		FD4A170221856CA5007CFEDC /* NK+UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4A170121856CA5007CFEDC /* NK+UIEdgeInsets.swift */; };
 		FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91AA262184496B000133F7 /* AppDelegate.swift */; };
 		FD91AA2E2184496E000133F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2D2184496E000133F7 /* Assets.xcassets */; };
 		FD91AA312184496E000133F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2F2184496E000133F7 /* LaunchScreen.storyboard */; };
@@ -37,6 +38,7 @@
 		FD229FBB21852073004F01A6 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		FD229FBE218538FA004F01A6 /* UITableView+setEmptyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+setEmptyMessage.swift"; sourceTree = "<group>"; };
 		FD229FC0218541CC004F01A6 /* CaseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseDetailViewController.swift; sourceTree = "<group>"; };
+		FD4A170121856CA5007CFEDC /* NK+UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NK+UIEdgeInsets.swift"; sourceTree = "<group>"; };
 		FD91AA232184496B000133F7 /* noticekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noticekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD91AA262184496B000133F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD91AA2D2184496E000133F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				FD229FBE218538FA004F01A6 /* UITableView+setEmptyMessage.swift */,
+				FD4A170121856CA5007CFEDC /* NK+UIEdgeInsets.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				FD229FAC21850683004F01A6 /* NKSplitViewController.swift in Sources */,
 				FD229FB821851AC9004F01A6 /* JSONAPIClient.swift in Sources */,
 				FD229FC1218541CC004F01A6 /* CaseDetailViewController.swift in Sources */,
+				FD4A170221856CA5007CFEDC /* NK+UIEdgeInsets.swift in Sources */,
 				FD229F9621844FF7004F01A6 /* NKAPIClient.swift in Sources */,
 				FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */,
 				FD229F9A21845287004F01A6 /* CourtCase.swift in Sources */,

@@ -53,8 +53,8 @@ class CasesViewController: UIViewController {
     }
 
     private func loadData() {
-        noticekeeper.cases { cases in
-            self.courtCases = cases
+        noticekeeper.cases {
+            self.courtCases = $0
         }
     }
 }
