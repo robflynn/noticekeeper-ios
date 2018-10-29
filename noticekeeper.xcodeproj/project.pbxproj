@@ -22,6 +22,7 @@
 		FD635370218682E800F63200 /* NKSectionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63536F218682E800F63200 /* NKSectionedViewController.swift */; };
 		FD6353732186A1EE00F63200 /* NKColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6353722186A1EE00F63200 /* NKColors.swift */; };
 		FD6353792186B26700F63200 /* NKDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6353782186B26700F63200 /* NKDefaults.swift */; };
+		FD63537C2186BBDC00F63200 /* NKTableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63537B2186BBDC00F63200 /* NKTableSectionHeaderView.swift */; };
 		FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91AA262184496B000133F7 /* AppDelegate.swift */; };
 		FD91AA2E2184496E000133F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2D2184496E000133F7 /* Assets.xcassets */; };
 		FD91AA312184496E000133F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2F2184496E000133F7 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 		FD63536F218682E800F63200 /* NKSectionedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKSectionedViewController.swift; sourceTree = "<group>"; };
 		FD6353722186A1EE00F63200 /* NKColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKColors.swift; sourceTree = "<group>"; };
 		FD6353782186B26700F63200 /* NKDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKDefaults.swift; sourceTree = "<group>"; };
+		FD63537B2186BBDC00F63200 /* NKTableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKTableSectionHeaderView.swift; sourceTree = "<group>"; };
 		FD91AA232184496B000133F7 /* noticekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noticekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD91AA262184496B000133F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD91AA2D2184496E000133F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		FD229FA221845D06004F01A6 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				FD63537A2186BBC300F63200 /* defaults */,
 				FD6353712186A1D900F63200 /* config */,
 				FD229FAA21850675004F01A6 /* controls */,
 				FD229F972184526F004F01A6 /* views */,
@@ -153,6 +156,14 @@
 				FD6353782186B26700F63200 /* NKDefaults.swift */,
 			);
 			path = config;
+			sourceTree = "<group>";
+		};
+		FD63537A2186BBC300F63200 /* defaults */ = {
+			isa = PBXGroup;
+			children = (
+				FD63537B2186BBDC00F63200 /* NKTableSectionHeaderView.swift */,
+			);
+			path = defaults;
 			sourceTree = "<group>";
 		};
 		FD91AA1A2184496B000133F7 = {
@@ -314,6 +325,7 @@
 				FD229FBF218538FA004F01A6 /* UITableView+setEmptyMessage.swift in Sources */,
 				FD229FAC21850683004F01A6 /* NKSplitViewController.swift in Sources */,
 				FD6353732186A1EE00F63200 /* NKColors.swift in Sources */,
+				FD63537C2186BBDC00F63200 /* NKTableSectionHeaderView.swift in Sources */,
 				FD229FB821851AC9004F01A6 /* JSONAPIClient.swift in Sources */,
 				FD229FC1218541CC004F01A6 /* CaseDetailViewController.swift in Sources */,
 				FD4A170221856CA5007CFEDC /* NK+UIEdgeInsets.swift in Sources */,

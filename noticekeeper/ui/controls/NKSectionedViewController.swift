@@ -103,18 +103,9 @@ extension NKSectionedViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     let title = self.tableView(tableView, titleForHeaderInSection: section)
 
-    let view = UIView()
-    view.backgroundColor = UIColor.Theme.tableHeaderBackground
-
-    let label = UILabel()
-    label.text = title
-    label.textColor = .black
-    view.addSubview(label)
-    label.edges(insetWith: view, by: 10)
-
-    let verticalLayoutContraint = NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0)
-    view.addConstraint(verticalLayoutContraint)
-
+    let view = NKTableSectionHeaderView()
+    view.text = title
+    
     return view
   }
 

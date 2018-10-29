@@ -13,15 +13,7 @@ struct NKDefaults {
   struct UI {
     struct Table {
       static func headerView() -> UIView {
-        let view = UIView()
-        let label = UILabel()
-
-        view.addSubview(label)
-        label.edges(insetWith: view, by: 10)
-
-        view.backgroundColor = UIColor.Theme.tableHeaderBackground
-
-        return view
+        return NKTableSectionHeaderView()
       }
     }
   }

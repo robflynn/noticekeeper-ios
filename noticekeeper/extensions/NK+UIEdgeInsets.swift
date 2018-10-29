@@ -17,7 +17,7 @@ extension UIEdgeInsets {
 }
 
 extension UIView {
-  func edges(insetWith view: UIView, by margin: Int) {
+  func edges(insetWithin view: UIView, by margin: Int) {
     self.edges(to: view, insets: view.safeAreaInsets + margin)
   }
 }

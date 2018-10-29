@@ -89,6 +89,14 @@ extension CasesViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension CasesViewController: UITableViewDelegate {
+
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let view = NKTableSectionHeaderView()
+    view.text = "Cases"
+
+    return view
+  }
+
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let courtCase = self.courtCases[indexPath.row]
 
