@@ -96,9 +96,9 @@ extension CasesViewController: UITableViewDelegate {
     vc.section {
       $0.name = courtCase.caseName
 
-      $0.add(courtCase.caseNumber)
-      $0.add(courtCase.locality)
-      $0.add(courtCase.status)
+      $0.add("Case Number: \(courtCase.caseNumber)")
+      $0.add("State: \(courtCase.locality)")
+      $0.add("Status: \(courtCase.status)")
     }
 
     vc.section {

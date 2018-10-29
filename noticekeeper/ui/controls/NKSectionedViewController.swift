@@ -51,6 +51,11 @@ class NKSectionedViewController: UIViewController {
     tableView.edgesToSuperview()
   }
 
+  /**
+   Add a new section to the view
+
+   - parameter yield: Clojure returning the new `Section`
+   */
   func section(yield: ((Section) -> ())) {
     let section = Section()
     sections.append(section)
