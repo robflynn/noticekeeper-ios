@@ -9,32 +9,36 @@
 import UIKit
 import TinyConstraints
 
-class WoozleSectionRow {
-  var name: String?
-}
+/**
+ A UITableViewController-based sectioned, programmatic ViewController.
+ This is mostly for displaying settings and formy-looking things.
+ */
+class NKSectionedViewController: UIViewController {
 
-class WoozleViewSection {
-  var name: String?
-  var rows: [WoozleSectionRow] = []
+  /// Section
+  class Section {
+    var name: String?
+    var rows: [Row] = []
 
-  convenience init(named name: String) {
-    self.init()
+    func add(_ text: String) -> Row {
+      let row = Row(name: text)
 
-    self.name = name
+      rows.append(row)
+
+      return row
+    }
   }
 
-  func add(_ text: String) -> WoozleSectionRow {
-    let row = WoozleSectionRow()
-    row.name = text
-
-    rows.append(row)
-
-    return row
+  /// Row
+  struct Row {
+    var name: String
   }
-}
-class WoozleViewController: UIViewController {
 
-  var sections: [WoozleViewSection] = []
+  typealias RowView = UITableViewCell
+
+  /// The view's sections
+  private var sections: [Section] = []
+
   lazy var tableController: UITableViewController = UITableViewController()
 
   override func viewDidLoad() {
@@ -44,28 +48,18 @@ class WoozleViewController: UIViewController {
     tableView.dataSource = self
 
     view.addSubview(tableView)
-    tableView.edges(to: view, insets: view.layoutMargins + 10)
-
-    let caseSection = addSection(named: "Case")
-    caseSection.add("Name")
-    caseSection.add("Foo")
-    caseSection.add("Bar")
-
-    let docSection = addSection(named: "Documents")
-
-    docSection.add("Gravy")
+    tableView.edgesToSuperview()
   }
 
-  func addSection(named name: String) -> WoozleViewSection {
-    let section = WoozleViewSection(named: name)
-
+  func section(yield: ((Section) -> ())) {
+    let section = Section()
     sections.append(section)
 
-    return section
+    yield(section)
   }
 }
 
-extension WoozleViewController: UITableViewDataSource {
+extension NKSectionedViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return sections[section].name
   }
