@@ -12,26 +12,34 @@ import TinyConstraints
 class CaseDetailViewController: NKSectionedViewController {
   var courtCase: CourtCase? {
     didSet {
-      tableController.tableView.reloadData()
+      fetchCourtCase()
     }
   }
 
-    override func viewDidLoad() {
-      super.viewDidLoad()
-      
-      guard let courtCase = courtCase else { return }
+  private func fetchCourtCase() {
+    guard let courtCase = self.courtCase else { return }
 
-      section {
-        $0.name = courtCase.caseName
-
-        $0.add("Case Number: \(courtCase.caseNumber)")
-        $0.add("State: \(courtCase.locality)")
-        $0.add("Status: \(courtCase.status)")
-      }
-
-      section {
-        $0.name = "Documents"
-        $0.add("No documents yet. I haven't written the code.")
-      }
+    noticekeeper.case(courtCase.id) { courtCase in
+      print(courtCase)
     }
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    guard let courtCase = courtCase else { return }
+
+    section {
+      $0.name = courtCase.caseName
+
+      $0.add("Case Number: \(courtCase.caseNumber)")
+      $0.add("State: \(courtCase.locality)")
+      $0.add("Status: \(courtCase.status)")
+    }
+
+    section {
+      $0.name = "Documents"
+      $0.add("No documents yet. I haven't written the code.")
+    }
+  }
 }

@@ -23,9 +23,20 @@ class NKAPIClient: JSONAPIClient {
             switch response {
             case .success(let cases):
                 completion(cases)
-            case .failure(let error):
+            case .failure( _):
                 assertionFailure("Handle failed case")
             }
         }
     }
+
+  func `case`(_ id: Int, completion: @escaping (CourtCase) -> Void) {
+    get(as: CourtCase.self, from: "/clients/\(id)") { response in
+      switch response {
+      case .success(let `case`):
+          completion(`case`)
+      case .failure( _):
+          assertionFailure("Handle failed case")
+      }
+    }
+  }
 }
