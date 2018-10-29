@@ -47,8 +47,9 @@ class CasesViewController: UIViewController {
   }
 
   private func buildMasterView() {
-    self.masterController.tableView.delegate = self
     self.masterController.tableView.dataSource = self
+    self.masterController.tableView.delegate = self
+    
     self.masterController.tableView.setEmptyMessage("Loading...")
   }
 
@@ -72,7 +73,7 @@ extension CasesViewController: UITableViewDataSource {
     cell.textLabel?.text = client.caseName
 
     cell.detailTextLabel?.text = client.caseNumber
-    cell.detailTextLabel?.textColor = .red
+    cell.detailTextLabel?.textColor = UIColor.Theme.blue
 
     return cell
   }
@@ -91,20 +92,12 @@ extension CasesViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let courtCase = self.courtCases[indexPath.row]
 
-    let vc = NKSectionedViewController()
+    showCourtCaseDetails(for: courtCase)
+  }
 
-    vc.section {
-      $0.name = courtCase.caseName
-
-      $0.add("Case Number: \(courtCase.caseNumber)")
-      $0.add("State: \(courtCase.locality)")
-      $0.add("Status: \(courtCase.status)")
-    }
-
-    vc.section {
-      $0.name = "Documents"
-      $0.add("No documents yet. I haven't written the code.")
-    }
+  private func showCourtCaseDetails(for courtCase: CourtCase) {
+    let vc = CaseDetailViewController()
+    vc.courtCase = courtCase
 
     self.splitVC.showDetailViewController(vc, sender: self)
   }

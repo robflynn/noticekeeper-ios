@@ -9,32 +9,29 @@
 import UIKit
 import TinyConstraints
 
-class CaseDetailViewController: UITableViewController {
-    var courtCase: CourtCase?
-
-    convenience init() {
-        self.init(style: .plain)
-
-        self.tableView.dataSource = self
+class CaseDetailViewController: NKSectionedViewController {
+  var courtCase: CourtCase? {
+    didSet {
+      tableController.tableView.reloadData()
     }
+  }
 
     override func viewDidLoad() {
-        self.tableView.dataSource = self
-    }
+      super.viewDidLoad()
+      
+      guard let courtCase = courtCase else { return }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
+      section {
+        $0.name = courtCase.caseName
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
-        case 0:
-            return courtCase?.caseName
-        case 1:
-            return "Documents"
-        default:
-            return nil
-        }
-    }
+        $0.add("Case Number: \(courtCase.caseNumber)")
+        $0.add("State: \(courtCase.locality)")
+        $0.add("Status: \(courtCase.status)")
+      }
 
+      section {
+        $0.name = "Documents"
+        $0.add("No documents yet. I haven't written the code.")
+      }
+    }
 }

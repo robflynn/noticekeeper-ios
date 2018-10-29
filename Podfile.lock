@@ -1,16 +1,24 @@
 PODS:
+  - SwiftHEXColors (1.1.1)
+  - SwiftyBeaver (1.6.0)
   - TinyConstraints (3.1.1)
 
 DEPENDENCIES:
+  - SwiftHEXColors
+  - SwiftyBeaver
   - TinyConstraints
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - SwiftHEXColors
+    - SwiftyBeaver
     - TinyConstraints
 
 SPEC CHECKSUMS:
+  SwiftHEXColors: 9681e756dc78a99ae97f277165b3f5e33b087553
+  SwiftyBeaver: e45759613e50b522b0e6f53b1f0f14389b45ca34
   TinyConstraints: c15ce864e9ef87dfd18ee3bd746d510a38d84198
 
-PODFILE CHECKSUM: 1ddb80ab4166e2c034cf6fe476d7dbb9de0a74f1
+PODFILE CHECKSUM: bc9778f4eda4ffcf210dc23ecc8d62b351767c46
 
 COCOAPODS: 1.5.3

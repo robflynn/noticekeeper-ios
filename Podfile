@@ -6,5 +6,7 @@ target 'noticekeeper' do
   use_frameworks!
 
   # Pods for noticekeeper
+	pod 'SwiftHEXColors'
 	pod 'TinyConstraints'
+	pod 'SwiftyBeaver'
 end

@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import SwiftyBeaver
+import SwiftHEXColors
 
 //let noticekeeper = NKAPIClient(.local)
 
 let noticekeeper = NKAPIClient()
+let logger = SwiftyBeaver.self
 
 func async(completion: (() -> Void)?) {
     DispatchQueue.main.async {
@@ -25,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        logger.addDestination(ConsoleDestination())
 
         window = UIWindow(frame: UIScreen.main.bounds)
 

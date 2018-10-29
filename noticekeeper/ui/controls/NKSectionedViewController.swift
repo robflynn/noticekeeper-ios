@@ -14,41 +14,22 @@ import TinyConstraints
  This is mostly for displaying settings and formy-looking things.
  */
 class NKSectionedViewController: UIViewController {
-
-  /// Section
-  class Section {
-    var name: String?
-    var rows: [Row] = []
-
-    func add(_ text: String) -> Row {
-      let row = Row(name: text)
-
-      rows.append(row)
-
-      return row
-    }
-  }
-
-  /// Row
-  struct Row {
-    var name: String
-  }
-
   typealias RowView = UITableViewCell
 
   /// The view's sections
   private var sections: [Section] = []
 
-  lazy var tableController: UITableViewController = UITableViewController()
+  lazy var tableController = UITableViewController.init(style: .grouped)
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     let tableView = tableController.tableView!
     tableView.dataSource = self
+    tableView.delegate = self
 
     view.addSubview(tableView)
-    tableView.edgesToSuperview()
+    tableView.edges(to: view, insets: view.safeAreaInsets + 10)
   }
 
   /**
@@ -64,6 +45,30 @@ class NKSectionedViewController: UIViewController {
   }
 }
 
+// MARK: - Section
+extension NKSectionedViewController {
+  class Section {
+    var name: String?
+    var rows: [Row] = []
+
+    func add(_ text: String) -> Row {
+      let row = Row(name: text)
+
+      rows.append(row)
+
+      return row
+    }
+  }
+}
+
+// MARK: - Row
+extension NKSectionedViewController {
+  struct Row {
+    var name: String
+  }
+}
+
+// MARK: - UITableViewDataSource
 extension NKSectionedViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
     return sections[section].name
@@ -87,8 +92,33 @@ extension NKSectionedViewController: UITableViewDataSource {
     let label = UILabel()
     label.text = row.name
     cell.addSubview(label)
-    label.edgesToSuperview()
+    label.edges(to: cell, insets: cell.safeAreaInsets + 10)
 
     return cell
+  }
+}
+
+// MARK: - UITableViewDelegate
+extension NKSectionedViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let title = self.tableView(tableView, titleForHeaderInSection: section)
+
+    let view = UIView()
+    view.backgroundColor = UIColor.Theme.tableHeaderBackground
+
+    let label = UILabel()
+    label.text = title
+    label.textColor = .black
+    view.addSubview(label)
+    label.edges(insetWith: view, by: 10)
+
+    let verticalLayoutContraint = NSLayoutConstraint(item: label, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0)
+    view.addConstraint(verticalLayoutContraint)
+
+    return view
+  }
+
+  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    return 50
   }
 }
