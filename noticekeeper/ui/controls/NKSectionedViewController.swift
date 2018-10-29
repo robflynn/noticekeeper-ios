@@ -29,7 +29,7 @@ class NKSectionedViewController: UIViewController {
     tableView.delegate = self
 
     view.addSubview(tableView)
-    tableView.edges(to: view, insets: view.safeAreaInsets + 10)
+    tableView.edgesToSuperview()
   }
 
   /**
@@ -92,7 +92,7 @@ extension NKSectionedViewController: UITableViewDataSource {
     let label = UILabel()
     label.text = row.name
     cell.addSubview(label)
-    label.edges(to: cell, insets: cell.safeAreaInsets + 10)
+    label.edges(insetWithin: cell, by: 10)
 
     return cell
   }
