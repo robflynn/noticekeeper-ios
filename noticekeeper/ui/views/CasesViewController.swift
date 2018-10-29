@@ -73,7 +73,7 @@ extension CasesViewController: UITableViewDataSource {
     cell.textLabel?.text = client.caseName
 
     cell.detailTextLabel?.text = client.caseNumber
-    cell.detailTextLabel?.textColor = UIColor.Theme.blue
+    cell.detailTextLabel?.textColor = NKDefaults.Color.blue
 
     return cell
   }

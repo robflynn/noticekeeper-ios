@@ -43,6 +43,6 @@ class NKTableSectionHeaderView: UIView {
     label.text = self.text
     label.textColor = .black
 
-    backgroundColor = UIColor.Theme.tableHeaderBackground
+    backgroundColor = NKDefaults.Color.tableHeaderBackground
   }
 }
