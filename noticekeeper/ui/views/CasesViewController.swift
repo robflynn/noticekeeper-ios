@@ -91,8 +91,9 @@ extension CasesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let courtCase = self.courtCases[indexPath.row]
 
-        let vc = CaseDetailViewController()
-        vc.courtCase = courtCase
+        let vc = WoozleViewController()
+
+       // vc.courtCase = courtCase
 
         self.splitVC.showDetailViewController(vc, sender: self)
     }
