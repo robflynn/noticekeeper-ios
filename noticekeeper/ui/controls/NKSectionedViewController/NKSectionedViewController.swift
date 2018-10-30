@@ -52,9 +52,10 @@ extension NKSectionedViewController {
     var name: String?
     var cells: [NKSectionedViewCell] = []
 
-    func addCell(withName name: String, block: ((NKSectionedViewCell) -> ())?) -> NKSectionedViewCell {
-      let cell = NKSectionedViewCell(named: name)
+    typealias NewCellBlock = (NKSectionedViewCell) -> ()
 
+    func addCell<T>(ofType cellType: T.Type, withName name: String, block: NewCellBlock? = nil) -> T where T:NKSectionedViewCell {
+      let cell = cellType.init()
       cells.append(cell)
 
       block?(cell)

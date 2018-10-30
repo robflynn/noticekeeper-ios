@@ -8,11 +8,11 @@
 import UIKit
 
 class NKSectionedViewCell: UIView {
-  var name: String?
+  required convenience init() {
+    self.init(frame: .zero)
 
-  convenience init(named name: String) {
-    self.init()
-
-    self.name = name
+    sectionCellDidLoad()
   }
+
+  func sectionCellDidLoad() {}
 }

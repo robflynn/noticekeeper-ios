@@ -20,29 +20,58 @@ class CaseDetailViewController: NKSectionedViewController {
     guard let courtCase = self.courtCase else { return }
 
     noticekeeper.case(courtCase.id) { courtCase in
-      print(courtCase)
+      self.renderCourtCase(courtCase)
     }
   }
 
   override func viewDidLoad() {
     super.viewDidLoad()
+  }
 
-    guard let courtCase = courtCase else { return }
+  private func renderCourtCase(_ courtCase: CourtCase) {
+    let theCase = courtCase
 
-    section {
-      $0.name = courtCase.caseName
+    async {
+      logger.debug("beginning async")
 
-      $0.addCell(withName: "caseNumber") { cell in
-        let label = UILabel()
-        label.text = "Case Number: \(courtCase.caseNumber) [I am a custom Cell Now]"
+      self.section {
+        $0.name = "Case"
 
-        cell.addSubview(label)
-        label.edgesToSuperview()
+        $0.addCell(ofType: NKSectionedViewCell.self, withName: "caseNumber") { cell in
+          let label = UILabel()
+          label.text = theCase.caseNumber
+
+          cell.addSubview(label)
+          label.edgesToSuperview()
+        }
+
+      }
+
+      self.section {
+        $0.name = "Documents"
+
+        let docsCell = $0.addCell(ofType: DocumentsSectionViewCell.self, withName: "docs") { cell in
+          let documentsCell = cell as! DocumentsSectionViewCell
+
+          documentsCell.documents = theCase.documents
+        }
+      }
+
+      defer {
+        self.tableController.tableView.reloadData()
+
+        logger.debug("leaving async")
       }
     }
+  }
+}
 
-    section { section in
-      section.name = "Documents"
-    }
+class DocumentsSectionViewCell: NKSectionedViewCell {
+  var documents: [Document]? = nil
+
+  override func sectionCellDidLoad() {
+    super.sectionCellDidLoad()
+
+    self.backgroundColor = .red
   }
 }
