@@ -27,7 +27,8 @@ class NKSectionedViewController: UIViewController {
     let tableView = tableController.tableView!
     tableView.dataSource = self
     tableView.delegate = self
-
+    tableView.bounces = false
+    
     view.addSubview(tableView)
     tableView.edgesToSuperview()
   }
@@ -49,22 +50,17 @@ class NKSectionedViewController: UIViewController {
 extension NKSectionedViewController {
   class Section {
     var name: String?
-    var rows: [Row] = []
+    var cells: [NKSectionedViewCell] = []
 
-    func add(_ text: String) -> Row {
-      let row = Row(name: text)
+    func addCell(withName name: String, block: ((NKSectionedViewCell) -> ())?) -> NKSectionedViewCell {
+      let cell = NKSectionedViewCell(named: name)
 
-      rows.append(row)
+      cells.append(cell)
 
-      return row
+      block?(cell)
+
+      return cell
     }
-  }
-}
-
-// MARK: - Row
-extension NKSectionedViewController {
-  struct Row {
-    var name: String
   }
 }
 
@@ -81,18 +77,16 @@ extension NKSectionedViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     let viewSection = sections[section]
 
-    return viewSection.rows.count
+    return viewSection.cells.count
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let viewSection = sections[indexPath.section]
-    let row = viewSection.rows[indexPath.row]
+    let row = viewSection.cells[indexPath.row]
 
     let cell = UITableViewCell()
-    let label = UILabel()
-    label.text = row.name
-    cell.addSubview(label)
-    label.edges(insetWithin: cell, by: 10)
+    cell.addSubview(row)
+    row.edges(insetWithin: cell, by: 10)
 
     return cell
   }

@@ -22,6 +22,9 @@
 		FD635370218682E800F63200 /* NKSectionedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63536F218682E800F63200 /* NKSectionedViewController.swift */; };
 		FD6353792186B26700F63200 /* NKDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6353782186B26700F63200 /* NKDefaults.swift */; };
 		FD63537C2186BBDC00F63200 /* NKTableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63537B2186BBDC00F63200 /* NKTableSectionHeaderView.swift */; };
+		FD63537F2186CB1E00F63200 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63537E2186CB1E00F63200 /* Document.swift */; };
+		FD6353822187F3F500F63200 /* NKRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6353812187F3F500F63200 /* NKRowCell.swift */; };
+		FD6353842187F64100F63200 /* NKSectionedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6353832187F64100F63200 /* NKSectionedViewCell.swift */; };
 		FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD91AA262184496B000133F7 /* AppDelegate.swift */; };
 		FD91AA2E2184496E000133F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2D2184496E000133F7 /* Assets.xcassets */; };
 		FD91AA312184496E000133F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD91AA2F2184496E000133F7 /* LaunchScreen.storyboard */; };
@@ -45,6 +48,9 @@
 		FD63536F218682E800F63200 /* NKSectionedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKSectionedViewController.swift; sourceTree = "<group>"; };
 		FD6353782186B26700F63200 /* NKDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKDefaults.swift; sourceTree = "<group>"; };
 		FD63537B2186BBDC00F63200 /* NKTableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKTableSectionHeaderView.swift; sourceTree = "<group>"; };
+		FD63537E2186CB1E00F63200 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		FD6353812187F3F500F63200 /* NKRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKRowCell.swift; sourceTree = "<group>"; };
+		FD6353832187F64100F63200 /* NKSectionedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NKSectionedViewCell.swift; sourceTree = "<group>"; };
 		FD91AA232184496B000133F7 /* noticekeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = noticekeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD91AA262184496B000133F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD91AA2D2184496E000133F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				FD229F9921845287004F01A6 /* CourtCase.swift */,
+				FD63537E2186CB1E00F63200 /* Document.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -121,8 +128,8 @@
 		FD229FAA21850675004F01A6 /* controls */ = {
 			isa = PBXGroup;
 			children = (
+				FD6353802187F3DF00F63200 /* NKSectionedViewController */,
 				FD229FAB21850683004F01A6 /* NKSplitViewController.swift */,
-				FD63536F218682E800F63200 /* NKSectionedViewController.swift */,
 			);
 			path = controls;
 			sourceTree = "<group>";
@@ -161,6 +168,16 @@
 				FD63537B2186BBDC00F63200 /* NKTableSectionHeaderView.swift */,
 			);
 			path = table;
+			sourceTree = "<group>";
+		};
+		FD6353802187F3DF00F63200 /* NKSectionedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD63536F218682E800F63200 /* NKSectionedViewController.swift */,
+				FD6353812187F3F500F63200 /* NKRowCell.swift */,
+				FD6353832187F64100F63200 /* NKSectionedViewCell.swift */,
+			);
+			path = NKSectionedViewController;
 			sourceTree = "<group>";
 		};
 		FD91AA1A2184496B000133F7 = {
@@ -320,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD229FBF218538FA004F01A6 /* UITableView+setEmptyMessage.swift in Sources */,
+				FD6353842187F64100F63200 /* NKSectionedViewCell.swift in Sources */,
 				FD229FAC21850683004F01A6 /* NKSplitViewController.swift in Sources */,
 				FD63537C2186BBDC00F63200 /* NKTableSectionHeaderView.swift in Sources */,
 				FD229FB821851AC9004F01A6 /* JSONAPIClient.swift in Sources */,
@@ -327,6 +345,8 @@
 				FD4A170221856CA5007CFEDC /* NK+UIEdgeInsets.swift in Sources */,
 				FD229F9621844FF7004F01A6 /* NKAPIClient.swift in Sources */,
 				FD91AA272184496B000133F7 /* AppDelegate.swift in Sources */,
+				FD6353822187F3F500F63200 /* NKRowCell.swift in Sources */,
+				FD63537F2186CB1E00F63200 /* Document.swift in Sources */,
 				FD229F9A21845287004F01A6 /* CourtCase.swift in Sources */,
 				FD635370218682E800F63200 /* NKSectionedViewController.swift in Sources */,
 				FD229FBA21851EC7004F01A6 /* APIResponse.swift in Sources */,

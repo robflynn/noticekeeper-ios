@@ -7,19 +7,21 @@
 //
 
 public struct CourtCase: Decodable {
-    var id: Int
-    var userID: Int
-    var caseName: String
-    var caseNumber: String
-    var locality: String
-    var status: String
+  var id: Int
+  var userID: Int
+  var caseName: String
+  var caseNumber: String
+  var locality: String
+  var status: String
+  var documents: [Document]?
 
-    enum CodingKeys: String, CodingKey {
-        case id
-        case userID = "user_id"
-        case caseName = "case_name"
-        case caseNumber = "case_number"
-        case locality = "case_state"
-        case status
-    }
+  enum CodingKeys: String, CodingKey {
+    case id
+    case userID = "user_id"
+    case caseName = "case_name"
+    case caseNumber = "case_number"
+    case locality = "case_state"
+    case status
+    case documents
+  }
 }

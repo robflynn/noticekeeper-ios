@@ -40,7 +40,8 @@ extension JSONAPIClient {
                 do {
                     try completion?(.success(JSONDecoder().decode(T.self, from: data)))
                 } catch let decodingError {
-                    assertionFailure("Error decoding the JSON. Handle it.")
+                  logger.debug(decodingError)
+                    //assertionFailure("Error decoding the JSON. Handle it.")
 
                     return
                 }

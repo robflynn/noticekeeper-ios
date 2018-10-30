@@ -32,14 +32,17 @@ class CaseDetailViewController: NKSectionedViewController {
     section {
       $0.name = courtCase.caseName
 
-      $0.add("Case Number: \(courtCase.caseNumber)")
-      $0.add("State: \(courtCase.locality)")
-      $0.add("Status: \(courtCase.status)")
+      $0.addCell(withName: "caseNumber") { cell in
+        let label = UILabel()
+        label.text = "Case Number: \(courtCase.caseNumber) [I am a custom Cell Now]"
+
+        cell.addSubview(label)
+        label.edgesToSuperview()
+      }
     }
 
-    section {
-      $0.name = "Documents"
-      $0.add("No documents yet. I haven't written the code.")
+    section { section in
+      section.name = "Documents"
     }
   }
 }
