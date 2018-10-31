@@ -44,6 +44,10 @@ class NKSectionedViewController: UIViewController {
 
     yield(section)
   }
+
+  func removeAllSections() {
+    self.sections.removeAll()
+  }
 }
 
 // MARK: - Section

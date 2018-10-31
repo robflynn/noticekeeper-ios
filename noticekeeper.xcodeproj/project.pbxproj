@@ -90,9 +90,9 @@
 		FD229F972184526F004F01A6 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FD452B8C21894E7800356694 /* CaseDetailViewController */,
 				FD229FA62184F993004F01A6 /* MainViewController.swift */,
 				FD229FA82184FA06004F01A6 /* CasesViewController.swift */,
-				FD229FC0218541CC004F01A6 /* CaseDetailViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -151,6 +151,14 @@
 				FD4A170121856CA5007CFEDC /* NK+UIEdgeInsets.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		FD452B8C21894E7800356694 /* CaseDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD229FC0218541CC004F01A6 /* CaseDetailViewController.swift */,
+			);
+			path = CaseDetailViewController;
 			sourceTree = "<group>";
 		};
 		FD63537A2186BBC300F63200 /* defaults */ = {

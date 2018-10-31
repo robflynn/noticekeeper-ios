@@ -16,4 +16,8 @@ class NKSectionedViewCell: UIView {
   }
 
   func sectionCellDidLoad() {}
+
+  func minimumHeight() -> Int {
+    return 0
+  }
 }
