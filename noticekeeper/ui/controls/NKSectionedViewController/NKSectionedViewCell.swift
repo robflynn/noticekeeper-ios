@@ -11,6 +11,7 @@ class NKSectionedViewCell: UIView {
   required convenience init() {
     self.init(frame: .zero)
 
+    print("in da daddy func")
     sectionCellDidLoad()
   }
 
